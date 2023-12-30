@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice record through browser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container mx-auto">
+    <div class="d-flex flex-column align-items-center mt-5">
+
+        <audio id="audioPlayer" controls class="mt-3"></audio>
+
+            <div class="mt-3">
+                <button id="startRecording" class="btn btn-primary">Start recording</button>
+                <button id="stopRecording" class="btn btn-danger" disabled>Stop recording</button>
+            </div>
+        <div id="result" class="text mt-3 display-4"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <script>
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    </script>
+    <script src="webs_stt.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
